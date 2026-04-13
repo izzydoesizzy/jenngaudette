@@ -1,8 +1,10 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: base },
+  { label: "About", href: `${base}about` },
+  { label: "Contact", href: `${base}contact` },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -10,8 +12,8 @@ const currentPath = Astro.url.pathname;
 
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <nav class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
-    <a href="/" class="flex items-center">
-      <img src="/images/logo.png" alt="WorkSapien" class="h-7 md:h-9 transition-all duration-300 brightness-0 invert" id="header-logo" />
+    <a href={base} class="flex items-center">
+      <img src={`${base}images/logo.png`} alt="WorkSapien" class="h-7 md:h-9 transition-all duration-300 brightness-0 invert" id="header-logo" />
     </a>
 
     <!-- Desktop nav -->

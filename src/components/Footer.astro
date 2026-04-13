@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -8,7 +9,7 @@ const currentYear = new Date().getFullYear();
     <div class="grid md:grid-cols-12 gap-12">
       <!-- Brand — wider -->
       <div class="md:col-span-5">
-        <img src="/images/logo.png" alt="WorkSapien" class="h-8 brightness-0 invert mb-5" />
+        <img src={`${base}images/logo.png`} alt="WorkSapien" class="h-8 brightness-0 invert mb-5" />
         <p class="text-white/40 text-[15px] leading-relaxed max-w-sm">
           Integrated career and health coaching for mid-career professionals ready to transform their relationship with work.
         </p>
@@ -19,9 +20,9 @@ const currentYear = new Date().getFullYear();
       <div class="md:col-span-3 md:col-start-7">
         <h4 class="text-[11px] font-semibold tracking-[0.2em] uppercase text-white/30 mb-5">Navigate</h4>
         <nav class="flex flex-col gap-3">
-          <a href="/" class="text-white/50 hover:text-white text-[15px] transition-colors duration-200">Home</a>
-          <a href="/about" class="text-white/50 hover:text-white text-[15px] transition-colors duration-200">About Jenn</a>
-          <a href="/contact" class="text-white/50 hover:text-white text-[15px] transition-colors duration-200">Contact</a>
+          <a href={base} class="text-white/50 hover:text-white text-[15px] transition-colors duration-200">Home</a>
+          <a href={`${base}about`} class="text-white/50 hover:text-white text-[15px] transition-colors duration-200">About Jenn</a>
+          <a href={`${base}contact`} class="text-white/50 hover:text-white text-[15px] transition-colors duration-200">Contact</a>
           <a
             href="#book"
             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/worksapien/30min'});return false;"
