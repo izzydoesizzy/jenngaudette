@@ -1,0 +1,64 @@
+---
+const painPoints = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"/></svg>`,
+    title: "Stuck in a cycle",
+    description: "You've tried the wait-and-see-if-things-change approach and work life has not improved. The feeling of stuck-ness is transforming into an existential crisis.",
+    number: "01",
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg>`,
+    title: "Burning out",
+    description: "You and your team are in a cycle of overwork, burnout and recovery. You want to create healthier work habits or consider bigger changes.",
+    number: "02",
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>`,
+    title: "Stressed to the limit",
+    description: "You are experiencing high stress levels directly related to work pressures and are ready to stop stressing without sacrificing learning and growth.",
+    number: "03",
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>`,
+    title: "Lost the spark",
+    description: "You have fallen out of love with the work that you do and are prepared to reflect on and re-negotiate, pivot or transition to healthier opportunity.",
+    number: "04",
+  },
+];
+---
+
+<section class="bg-cream py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <p class="text-secondary font-semibold text-xs tracking-[0.2em] uppercase mb-4">Sound familiar?</p>
+      <h2 class="font-serif text-3xl md:text-[2.5rem] text-primary leading-tight mb-5">
+        Work wasn't supposed to feel like this
+      </h2>
+      <p class="text-text-muted text-lg leading-relaxed">
+        You built a career you were proud of. Somewhere along the way, something shifted.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-px bg-sage/60 rounded-2xl overflow-hidden max-w-4xl mx-auto shadow-sm">
+      {painPoints.map((point) => (
+        <div class="bg-white p-8 md:p-10 group hover:bg-cream/50 transition-colors duration-300">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-sage/60 flex items-center justify-center text-primary group-hover:bg-secondary/10 group-hover:text-secondary transition-colors duration-300">
+              <Fragment set:html={point.icon} />
+            </div>
+            <span class="font-serif text-3xl text-sage group-hover:text-secondary/20 transition-colors duration-300">{point.number}</span>
+          </div>
+          <h3 class="font-serif text-xl text-primary mb-3">{point.title}</h3>
+          <p class="text-text-muted leading-relaxed text-[15px]">{point.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-16">
+      <p class="font-serif text-xl md:text-2xl text-primary italic">
+        You don't have to figure this out alone.
+      </p>
+      <div class="w-12 h-px bg-secondary mx-auto mt-6"></div>
+    </div>
+  </div>
+</section>

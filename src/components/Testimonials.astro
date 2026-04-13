@@ -1,0 +1,124 @@
+---
+const featured = [
+  {
+    quote: "A transformative experience, overall! Jenn's ability to intuitively guide the process is singular. We've addressed everything from neurodiversity to dreaming braver dreams. I've learned more about myself and my own strengths (and blindspots) than I could have imagined. It's really the best gift you can give to yourself.",
+    name: "Justine Purcell",
+    context: "Started a new role after working with Jenn",
+  },
+  {
+    quote: "Working with Jenn has been a transformative experience for me in terms of better understanding what energizes me in life and work. It's unbelievable that 20+ years into my career there was still so much to learn about my values and the kind of impact I want to make professionally.",
+    name: "Scott Weisbrod",
+    context: "20+ year career professional",
+  },
+  {
+    quote: "I had a wonderful experience during my 12-week/90-day program with Jenn. Right out of the gate, we worked to establish the goals that I was looking to achieve. I can confidently say that I accomplished the goals we set at the beginning and Jenn's coaching was instrumental in making this happen!",
+    name: "Arash Rahimpour",
+    context: "Completed the 90-day program",
+  },
+];
+
+const additional = [
+  {
+    quote: "Jenn treats every client as a unique individual and tailors her approach to meet their needs. Her process worked for me, building my confidence, giving me structure and tools. I have an exciting new job!",
+    name: "Chris S.",
+  },
+  {
+    quote: "Jenn is truly a great coach, listener and connector. I love how her program draws on many skill assessment tools used in the industry but then personalizes them and takes things to the next level of insight!",
+    name: "Sarah Frame",
+  },
+  {
+    quote: "Jennifer took a customized and holistic approach in helping me change my relationship and identity at work for the better. First by grounding me in defining my core values.",
+    name: "Benny Hua",
+  },
+  {
+    quote: "She has her own style, driven by an inner fire to support people who want their professions and career path to be more aligned with who they are, their values, their strengths.",
+    name: "Rajiv Koghar",
+  },
+  {
+    quote: "My coaching, led by Jenn, felt empowering! I absolutely loved her ability to listen, hold the space, enable reflection and creation of tangible action steps.",
+    name: "Sheena Kanwar",
+  },
+  {
+    quote: "Jenn is an incredible coach who cares deeply about my progress and success. There is not one person I haven't recommended her to.",
+    name: "Adea Coccoli",
+  },
+  {
+    quote: "Those 90 days changed my life! Every week I was excited for my session. The sessions made me feel stronger. Jenn helped me figure out who I am, what I do and why.",
+    name: "Former Client",
+  },
+];
+---
+
+<section class="bg-white py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <p class="text-secondary font-semibold text-xs tracking-[0.2em] uppercase mb-4">Client Stories</p>
+      <h2 class="font-serif text-3xl md:text-[2.5rem] text-primary leading-tight mb-5">
+        Real transformations from real people
+      </h2>
+      <p class="text-text-muted text-lg">
+        13 clients share what changed. Here's what they have to say.
+      </p>
+    </div>
+
+    <!-- Featured — large editorial quotes -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      {featured.map((t, i) => (
+        <div class:list={[
+          "relative rounded-2xl p-8 md:p-10 flex flex-col",
+          i === 0 ? "bg-primary text-white" : "bg-cream border border-sage/50",
+        ]}>
+          <!-- Large decorative quote mark -->
+          <span class:list={[
+            "font-serif text-[120px] leading-none absolute -top-2 left-6 select-none",
+            i === 0 ? "text-white/10" : "text-secondary/10",
+          ]}>"</span>
+
+          <p class:list={[
+            "relative leading-relaxed flex-grow text-[15px] z-10 mt-8",
+            i === 0 ? "text-white/80" : "text-text-muted",
+          ]}>
+            {t.quote}
+          </p>
+
+          <div class:list={[
+            "mt-8 pt-6 flex items-center gap-4",
+            i === 0 ? "border-t border-white/10" : "border-t border-sage/50",
+          ]}>
+            <div class:list={[
+              "w-10 h-10 rounded-full flex items-center justify-center font-serif text-lg",
+              i === 0 ? "bg-secondary text-white" : "bg-primary text-white",
+            ]}>
+              {t.name.charAt(0)}
+            </div>
+            <div>
+              <p class:list={[
+                "font-semibold text-sm",
+                i === 0 ? "text-white" : "text-primary",
+              ]}>{t.name}</p>
+              <p class:list={[
+                "text-xs mt-0.5",
+                i === 0 ? "text-white/50" : "text-text-muted",
+              ]}>{t.context}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Additional — compact strip -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {additional.map((t) => (
+        <div class="group bg-cream/50 hover:bg-cream rounded-xl p-6 border border-sage/30 transition-colors duration-200">
+          <p class="text-text-muted text-[13px] leading-relaxed italic mb-4">"{t.quote}"</p>
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+              <span class="text-primary text-[10px] font-semibold">{t.name.charAt(0)}</span>
+            </div>
+            <p class="font-medium text-primary text-xs">{t.name}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

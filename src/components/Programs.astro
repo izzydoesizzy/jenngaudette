@@ -1,0 +1,125 @@
+---
+const programs = [
+  {
+    name: "Balanced Leader",
+    duration: "2-6 months",
+    description: "For leaders and executives who want to perform sustainably without burning out. Build clarity, insight, and healthier ways of working.",
+    outcomes: [
+      "Gain clarity on your values and leadership identity",
+      "Create sustainable work habits that support your health",
+      "Navigate organizational challenges with confidence",
+      "Build capacity to lead without depleting yourself",
+    ],
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"/></svg>`,
+  },
+  {
+    name: "Career Change for Wellbeing",
+    duration: "3-6 months",
+    description: "For mid-career professionals ready to pivot, transition, or completely reinvent their career. A structured journey through Discovery, Re-design, and Generative phases.",
+    outcomes: [
+      "Discover who you are now and what you want next",
+      "Design a career path aligned with your values and health",
+      "Build a concrete action plan for your transition",
+      "Move forward with confidence and expanded capacity",
+    ],
+    featured: true,
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.58-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg>`,
+  },
+];
+---
+
+<section id="programs" class="bg-cream py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <p class="text-secondary font-semibold text-xs tracking-[0.2em] uppercase mb-4">Programs</p>
+      <h2 class="font-serif text-3xl md:text-[2.5rem] text-primary leading-tight mb-5">
+        Two paths. One destination.
+      </h2>
+      <p class="text-text-muted text-lg">Work that works for you.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {programs.map((program) => (
+        <div class:list={[
+          "relative rounded-2xl flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl group",
+          program.featured
+            ? "bg-primary text-white ring-1 ring-white/10"
+            : "bg-white ring-1 ring-sage shadow-sm",
+        ]}>
+          {program.featured && (
+            <span class="absolute top-5 right-5 inline-flex items-center gap-1.5 text-[10px] font-semibold text-secondary uppercase tracking-[0.2em] bg-secondary/10 px-3 py-1.5 rounded-full z-10">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Most Popular
+            </span>
+          )}
+          <div class="p-8 md:p-10 flex flex-col flex-grow">
+            <div class:list={[
+              "w-12 h-12 rounded-xl flex items-center justify-center mb-6",
+              program.featured
+                ? "bg-white/10 text-secondary"
+                : "bg-sage/60 text-primary",
+            ]}>
+              <Fragment set:html={program.icon} />
+            </div>
+
+            <h3 class:list={[
+              "font-serif text-2xl md:text-[1.75rem] mb-2",
+              program.featured ? "text-white" : "text-primary",
+            ]}>{program.name}</h3>
+
+            <p class:list={[
+              "text-sm font-medium mb-5",
+              program.featured ? "text-secondary" : "text-secondary",
+            ]}>{program.duration}</p>
+
+            <p class:list={[
+              "leading-relaxed mb-8 text-[15px]",
+              program.featured ? "text-white/60" : "text-text-muted",
+            ]}>{program.description}</p>
+
+            <ul class="space-y-3 mb-10 flex-grow">
+              {program.outcomes.map((outcome) => (
+                <li class="flex items-start gap-3">
+                  <svg class:list={["w-5 h-5 flex-shrink-0 mt-0.5", program.featured ? "text-secondary" : "text-secondary"]} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class:list={["text-[15px]", program.featured ? "text-white/70" : "text-text-muted"]}>
+                    {outcome}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#book"
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/worksapien/30min'});return false;"
+              class:list={[
+                "group/btn px-8 py-4 rounded-full text-base font-semibold text-center transition-all duration-200 inline-flex items-center justify-center gap-2",
+                program.featured
+                  ? "bg-secondary text-white hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/20"
+                  : "bg-primary text-white hover:bg-primary/90 hover:shadow-lg",
+              ]}
+            >
+              Book a Free Intro Call
+              <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <p class="text-text-muted">
+        Also available: <strong class="text-text font-medium">Individual sessions</strong> for interview prep, strategy, and mental fitness.
+      </p>
+      <a
+        href="#book"
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/worksapien/30min'});return false;"
+        class="group inline-flex items-center gap-2 text-secondary font-semibold mt-3 text-[15px]"
+      >
+        <span class="border-b border-secondary/30 group-hover:border-secondary transition-colors">Ask Jenn about options</span>
+        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>

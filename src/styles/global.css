@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2C3E2D;
+  --color-secondary: #8B7355;
+  --color-cream: #FAF8F5;
+  --color-sage: #E8EDE5;
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B6B6B;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation for scroll reveals */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Scroll-triggered reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+[data-reveal-stagger] > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+[data-reveal-stagger].revealed > *:nth-child(1) { transition-delay: 0ms; }
+[data-reveal-stagger].revealed > *:nth-child(2) { transition-delay: 100ms; }
+[data-reveal-stagger].revealed > *:nth-child(3) { transition-delay: 200ms; }
+[data-reveal-stagger].revealed > *:nth-child(4) { transition-delay: 300ms; }
+[data-reveal-stagger].revealed > *:nth-child(5) { transition-delay: 400ms; }
+[data-reveal-stagger].revealed > *:nth-child(6) { transition-delay: 500ms; }
+[data-reveal-stagger].revealed > *:nth-child(7) { transition-delay: 600ms; }
+
+[data-reveal-stagger].revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Selection color */
+::selection {
+  background-color: #8B7355;
+  color: white;
+}

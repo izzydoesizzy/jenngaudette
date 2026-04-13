@@ -1,0 +1,180 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import FinalCta from "../components/FinalCta.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="About Jenn Gaudette | WorkSapien"
+  description="Meet Jenn Gaudette, Master Certified Coach (MCC) with 20+ years of experience in career transition, wellness, and coaching. Her story of reinvention mirrors the transformation she guides her clients through."
+>
+  <Header />
+
+  <main>
+    <!-- Hero — dark to match header -->
+    <section class="bg-primary pt-32 pb-24 md:pt-40 md:pb-32 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.02]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-secondary font-semibold text-xs tracking-[0.2em] uppercase mb-6">About Jenn</p>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.1] mb-8">
+              My first client<br />was <span class="text-secondary">me.</span>
+            </h1>
+            <p class="text-white/50 text-lg md:text-xl leading-relaxed max-w-md">
+              That single realization changed everything. It's how WorkSapien was born, and it's why I coach the way I do.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-3 rounded-2xl border border-white/10"></div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+              <img
+                src="/images/jenn.jpg"
+                alt="Jenn Gaudette"
+                class="w-full aspect-[3/4] object-cover"
+                style="object-position: center 30%;"
+              />
+              <div class="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-primary/40 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="bg-cream py-24 md:py-32">
+      <div class="max-w-3xl mx-auto px-6 lg:px-12">
+        <p class="text-secondary font-semibold text-xs tracking-[0.2em] uppercase mb-4">The Journey</p>
+        <h2 class="font-serif text-3xl md:text-[2.5rem] text-primary leading-tight mb-10">The long road to finding alignment</h2>
+
+        <div class="space-y-6 text-text-muted leading-[1.8] text-[17px]">
+          <p>
+            I graduated with a degree in Psychology, full of ambition and ready to change the world. My first job? Selling shoes in a retail store in Australia.
+          </p>
+          <p>
+            I'd moved there planning to stay a few months. I stayed nearly <strong class="text-text font-medium">ten years</strong>. That experience of navigating career misalignment across countries, of doing work that didn't match who I was, became the foundation for everything I do today.
+          </p>
+          <p>
+            When I returned to Toronto, I built a career that spanned multiple domains over two decades: <strong class="text-text font-medium">human resources, workplace wellness, corporate career transition consulting at Gallagher</strong> (one of the world's largest HR consulting firms), and eventually founding my own practice.
+          </p>
+          <p>
+            My first venture was <strong class="text-text font-medium">Upspring Wellness</strong>, a workplace wellness consultancy. But as I worked with clients on their wellbeing, I kept seeing the same pattern: their health challenges were inseparable from their career challenges. Burnout, stress, loss of purpose. The work itself was making people sick.
+          </p>
+          <p>
+            That's when I realized I needed to become my own first client. I had to reinvent myself before I could truly help others do the same. I merged my expertise in career transition with health coaching and founded <strong class="text-text font-medium">WorkSapien</strong>.
+          </p>
+        </div>
+
+        <!-- Quote — elevated -->
+        <div class="relative bg-primary rounded-2xl p-10 md:p-12 mt-16">
+          <span class="font-serif text-[100px] leading-none absolute top-2 left-8 text-white/5 select-none">"</span>
+          <p class="font-serif text-xl md:text-2xl text-white/90 italic leading-relaxed relative z-10">
+            When I found coaching, I found a true alignment. Say YES to your mission, to yourself, to your journey.
+          </p>
+          <div class="flex items-center gap-3 mt-6 relative z-10">
+            <div class="w-8 h-px bg-secondary"></div>
+            <p class="text-secondary font-medium text-sm">Jenn Gaudette, CCA "What?" Podcast</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="bg-white py-24 md:py-32">
+      <div class="max-w-3xl mx-auto px-6 lg:px-12">
+        <p class="text-secondary font-semibold text-xs tracking-[0.2em] uppercase mb-4">Philosophy</p>
+        <h2 class="font-serif text-3xl md:text-[2.5rem] text-primary leading-tight mb-12">What I believe</h2>
+
+        <div class="space-y-10">
+          <div class="flex gap-6">
+            <div class="w-0.5 bg-secondary/30 rounded-full flex-shrink-0 relative">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-secondary"></div>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl text-primary mb-3">Work shapes your health</h3>
+              <p class="text-text-muted leading-relaxed">
+                Work is a powerful influence on every area of wellbeing. It's often a root cause of health issues, with the potential to elevate or deteriorate what you value most in life. You can't fix one without addressing the other.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="w-0.5 bg-secondary/30 rounded-full flex-shrink-0 relative">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-secondary"></div>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl text-primary mb-3">Career change is identity work</h3>
+              <p class="text-text-muted leading-relaxed">
+                A career pivot isn't just about updating your resume. It's about understanding who you are now, not who you were five years ago. It requires clearing the "career cobwebs" that accumulate from years in the workforce.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="w-0.5 bg-secondary/30 rounded-full flex-shrink-0 relative">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-secondary"></div>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl text-primary mb-3">Imposter syndrome is just your brain protecting you</h3>
+              <p class="text-text-muted leading-relaxed">
+                It's a negative script playing in your head that you may not be "good enough." If you take a beginner's mindset and view every situation as a chance to learn what you're capable of, every challenge becomes an opportunity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials detail -->
+    <section class="bg-cream py-24 md:py-32">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <p class="text-secondary font-semibold text-xs tracking-[0.2em] uppercase mb-4">Qualifications</p>
+        <h2 class="font-serif text-3xl md:text-[2.5rem] text-primary leading-tight mb-12">Credentials & education</h2>
+
+        <!-- Official badge images -->
+        <div class="flex flex-wrap items-center justify-center gap-8 mb-16 py-8 px-6 bg-white rounded-2xl border border-sage/50">
+          <img src="/images/badge-pcc.png" alt="ICF Professional Certified Coach" class="h-20 md:h-24" title="ICF Professional Certified Coach (upgraded to MCC)" />
+          <img src="/images/badge-icf-member.png" alt="ICF Member" class="h-20 md:h-24" title="International Coaching Federation Member" />
+          <img src="/images/badge-bhc.png" alt="Board Certified Health Coach" class="h-20 md:h-24" title="Transformational Master Coach — Health Coach Institute" />
+          <img src="/images/badge-hmba.png" alt="Health Coach Institute — Master Coach" class="h-20 md:h-24" title="Health Coach Institute Official Certificate" />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          {[
+            { category: "ICF Credential", title: "Master Certified Coach (MCC)", detail: "The highest ICF credential. Top 3% of coaches worldwide. 200+ hours of education, 2,500+ hours of coaching.", highlight: true },
+            { category: "Health Certification", title: "Board Certified Health Coach", detail: "National Board certified. Integrates health and wellness strategies into career coaching." },
+            { category: "Career Certification", title: "Career Development Practitioner", detail: "Professional certification in career counseling and development." },
+            { category: "Graduate Degree", title: "Master of Environmental Studies", detail: "Systems thinking and environmental behaviour change, applied to workplace sustainability." },
+            { category: "Graduate Degree", title: "Master of Arts", detail: "Advanced research degree complementing her interdisciplinary expertise." },
+            { category: "Undergraduate", title: "BA in Psychology", detail: "The foundation for understanding human behaviour, motivation, and change." },
+          ].map((cred) => (
+            <div class:list={[
+              "rounded-xl p-7 transition-all duration-200",
+              cred.highlight
+                ? "bg-primary text-white shadow-lg sm:col-span-2"
+                : "bg-white border border-sage/50 hover:shadow-md",
+            ]}>
+              <p class:list={[
+                "text-[11px] font-semibold uppercase tracking-[0.15em] mb-1.5",
+                cred.highlight ? "text-secondary" : "text-secondary",
+              ]}>{cred.category}</p>
+              <h3 class:list={[
+                "font-serif text-xl mb-2",
+                cred.highlight ? "text-white" : "text-primary",
+              ]}>{cred.title}</h3>
+              <p class:list={[
+                "text-sm leading-relaxed",
+                cred.highlight ? "text-white/60" : "text-text-muted",
+              ]}>{cred.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <FinalCta />
+  </main>
+
+  <Footer />
+</Layout>
